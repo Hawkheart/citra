@@ -230,6 +230,10 @@ void GRenderWindow::mouseReleaseEvent(QMouseEvent* event) {
         motion_emu->EndTilt();
 }
 
+void GRenderWindow::focusOutEvent(QFocusEvent* event) {
+    KeyMap::ReleaseAllKeys(*this);
+}
+
 void GRenderWindow::ReloadSetKeymaps() {
     KeyMap::ClearKeyMapping(keyboard_id);
     for (int i = 0; i < Settings::NativeInput::NUM_INPUTS; ++i) {

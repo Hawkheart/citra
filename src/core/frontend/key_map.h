@@ -90,4 +90,9 @@ void PressKey(EmuWindow& emu_window, HostDeviceKey key);
  * Maps a key release action and call the corresponding function in EmuWindow
  */
 void ReleaseKey(EmuWindow& emu_window, HostDeviceKey key);
+
+/**
+* Releases all pressed keys and resets the circle pad state to the center.
+*/
+void ReleaseAllKeys(EmuWindow& emu_window);
 }

@@ -149,4 +149,16 @@ void ReleaseKey(EmuWindow& emu_window, HostDeviceKey key) {
         }
     }
 }
+
+void ReleaseAllKeys(EmuWindow& emu_window) {
+    // Release "all" of the buttons.
+    emu_window.ButtonReleased({0xFFFFFFFF});
+
+    circle_pad_up = false;
+    circle_pad_right = false;
+    circle_pad_left = false;
+    circle_pad_right = false;
+    circle_pad_modifier = false;
+    UpdateCirclePad(emu_window);
+}
 }

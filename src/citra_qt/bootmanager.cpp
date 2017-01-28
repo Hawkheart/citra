@@ -231,6 +231,8 @@ void GRenderWindow::mouseReleaseEvent(QMouseEvent* event) {
 }
 
 void GRenderWindow::focusOutEvent(QFocusEvent* event) {
+    QWidget::focusOutEvent(event);
+
     KeyMap::ReleaseAllKeys(*this);
 }
 
